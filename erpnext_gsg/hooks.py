@@ -31,10 +31,20 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+	"Employee" : "public/js/employee.js",
+	"Journal Entry" : "public/js/journal_entry.js",
+	"Payment Entry": "public/js/payment_entry.js",
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+
+
+# doctype_js = {
+# 	"Journal Entry" : "public/js/journal_entry.js"
+# }
+
 
 # Home Pages
 # ----------
@@ -102,6 +112,12 @@ app_license = "MIT"
 #		"on_trash": "method"
 #	}
 # }
+
+doc_events = {
+	"Material Request": {
+		"on_submit": "erpnext_gsg.erpnext_gsg.doc_events.material_request.on_submit",
+		}
+}
 
 # Scheduled Tasks
 # ---------------

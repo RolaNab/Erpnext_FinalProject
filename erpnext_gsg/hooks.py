@@ -16,6 +16,9 @@ app_license = "MIT"
 # app_include_css = "/assets/erpnext_gsg/css/erpnext_gsg.css"
 # app_include_js = "/assets/erpnext_gsg/js/erpnext_gsg.js"
 
+app_include_js = [
+    "/assets/erpnext_gsg/js/sales_order_analysis.js"
+]
 # include js, css files in header of web template
 # web_include_css = "/assets/erpnext_gsg/css/erpnext_gsg.css"
 # web_include_js = "/assets/erpnext_gsg/js/erpnext_gsg.js"
@@ -116,9 +119,11 @@ doctype_js = {
 doc_events = {
 	"Material Request": {
 		"on_submit": "erpnext_gsg.erpnext_gsg.doc_events.material_request.on_submit",
+		},
+"Attendance": {
+		"validate": "erpnext_gsg.erpnext_gsg.doc_events.attendance_event.validate_attendance",
 		}
 }
-
 # Scheduled Tasks
 # ---------------
 
@@ -194,4 +199,11 @@ user_data_fields = [
 # auth_hooks = [
 #	"erpnext_gsg.auth.validate"
 # ]
+fixtures = ["Custom Script", "Report"]
+
+
+
+
+
+
 

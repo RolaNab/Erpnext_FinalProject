@@ -117,11 +117,19 @@ doctype_js = {
 # }
 
 doc_events = {
+    "*": {
+        "on_app_install": [
+            "erpnext_gsg.custom_script.install"
+        ]
+    },
 	"Material Request": {
 		"on_submit": "erpnext_gsg.erpnext_gsg.doc_events.material_request.on_submit",
 		},
-"Attendance": {
+	"Attendance": {
 		"validate": "erpnext_gsg.erpnext_gsg.doc_events.attendance_event.validate_attendance",
+		},
+	"Employee Excuse application": {
+		"validate": "erpnext_gsg.erpnext_gsg.doc_events.excuse_application.validate",
 		}
 }
 # Scheduled Tasks

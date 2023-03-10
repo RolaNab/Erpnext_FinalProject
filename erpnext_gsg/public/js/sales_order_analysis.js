@@ -16,7 +16,7 @@ frappe.query_reports["Sales Order Analysis"] = {
 			"default": frappe.defaults.get_default("company")
 		},
 		{
-			"fieldname":"from_time",
+			"fieldname":"sales_order_time",
 			"label": __("From Time"),
 			"fieldtype": "Time",
 			"width": "80",
@@ -24,7 +24,7 @@ frappe.query_reports["Sales Order Analysis"] = {
 //            "default": frappe.now(),
 		},
 		{
-			"fieldname":"to_time",
+			"fieldname":"sales_order_time",
 			"label": __("To Time"),
 			"fieldtype": "Time",
 			"width": "80",

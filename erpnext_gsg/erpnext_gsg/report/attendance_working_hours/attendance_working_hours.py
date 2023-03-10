@@ -11,11 +11,12 @@ def execute(filters=None):
 	columns = get_columns()
 	return columns, data
 
-
-
-
 def get_all_value(filters):
-	return frappe.db.get_all('Attendance' , ['employee_name','check_in', 'check_out', 'work_hours','name'],filters = filters)
+	att_work_hours = frappe.db.get_all('Attendance' ,
+				['employee_name','attendance_date','check_in', 'check_out', 'work_hours','name'],filters = filters)
+	for row in att_work_hours:
+		row.reference = f"<a target='_blank' href='/app/attendance/{row.name}'  title='{row.name}' data-doctype='Attendance' data-name='{row.name}'>View Attendance</a>"
+	return att_work_hours
 
 def get_columns():
 	columns = [
@@ -24,8 +25,7 @@ def get_columns():
 		{'fieldname': 'check_in', 'label': 'Check in', 'fieldtype': 'Time'},
 		{'fieldname': 'check_out', 'label': 'Check Out', 'fieldtype': 'Time'},
 		{'fieldname': 'work_hours', 'label': 'Work Hours', 'fieldtype': 'float'},
-	    {'fieldname': 'name','label': 'View Attendance', 'fieldtype':'Dynamic Link','options':'Attendance' }]
-
+		{"label": frappe._("Attendance Reference"), "fieldname": "reference", "fieldtype": "HTML"}]
 	return columns
 
 # , 'work_hours','late_hours'

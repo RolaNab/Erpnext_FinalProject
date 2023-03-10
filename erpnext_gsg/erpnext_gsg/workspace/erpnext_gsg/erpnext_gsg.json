@@ -1,0 +1,44 @@
+{
+ "cards_label": "Link Cards",
+ "category": "Modules",
+ "charts": [],
+ "creation": "2023-03-09 11:34:26.470486",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Erpnext GSG",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Excuse application",
+   "link_to": "Employee Excuse application",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-03-09 11:48:19.364355",
+ "modified_by": "Administrator",
+ "module": "Erpnext Gsg",
+ "name": "Erpnext GSG",
+ "onboarding": "",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "Tree",
+   "label": "Employee Excuse application",
+   "link_to": "Employee Excuse application",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "Shortcuts"
+}

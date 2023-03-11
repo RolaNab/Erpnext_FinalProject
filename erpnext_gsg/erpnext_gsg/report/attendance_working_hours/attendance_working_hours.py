@@ -15,9 +15,8 @@ def get_all_value(filters):
 	att_work_hours = frappe.db.get_all('Attendance' ,
 				['employee_name','attendance_date','check_in', 'check_out', 'work_hours','name'],filters = filters)
 	for row in att_work_hours:
-		row.reference = f"<a target='_blank' href='/app/attendance/{row.name}'  title='{row.name}' data-doctype='Attendance' data-name='{row.name}'>View Attendance</a>"
+		row.reference = f"<a target='_blank' onclick='window.open()' href='/app/attendance/{row.name}'  title='{row.name}' data-doctype='Attendance' data-name='{row.name}'>View Attendance</a>"
 	return att_work_hours
-
 def get_columns():
 	columns = [
 		{'fieldname': 'employee_name', 'label': 'Emplyee Name', 'fieldtype': 'Link', 'options': 'Employee'},

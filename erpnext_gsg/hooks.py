@@ -16,9 +16,9 @@ app_license = "MIT"
 # app_include_css = "/assets/erpnext_gsg/css/erpnext_gsg.css"
 # app_include_js = "/assets/erpnext_gsg/js/erpnext_gsg.js"
 
-app_include_js = [
-    "/assets/erpnext_gsg/js/sales_order_analysis.js"
-]
+# app_include_js = [
+#     "/assets/erpnext_gsg/js/sales_order_analysis.js"
+# ]
 # include js, css files in header of web template
 # web_include_css = "/assets/erpnext_gsg/css/erpnext_gsg.css"
 # web_include_js = "/assets/erpnext_gsg/js/erpnext_gsg.js"
